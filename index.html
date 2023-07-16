@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- <link rel="icon" type="image/svg+xml" href="favicon.svg" /> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Next-Position Demo</title>
+  <style>
+    .wrapper {
+      position: relative;
+      width: 80%;
+      height: 300px;
+      margin: 0 auto;
+      background: #f0f0f0;
+      overflow: hidden;
+    }
+
+    .wrapper .scroll-box {
+      height: 100%;
+      overflow: auto;
+    }
+
+    .wrapper .trigger-box {
+      height: 1000px;
+      width: 2000px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #tooltip {
+      width: max-content;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #222;
+      color: white;
+      font-weight: bold;
+      padding: 16px;
+      border-radius: 4px;
+      font-size: 90%;
+    }
+
+    #arrow {
+      position: absolute;
+      background: #222;
+      width: 8px;
+      height: 8px;
+      transform: rotate(45deg);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <div class="wrapper">
+      <div class="scroll-box">
+        <div class="trigger-box">
+          <button id="button" aria-describedby="tooltip">
+            My button
+          </button>
+          <div id="tooltip" role="tooltip">
+            <div id="arrow"></div>
+            My tooltip with more content
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/index.ts"></script>
+</body>
+
+</html>
