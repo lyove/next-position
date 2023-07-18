@@ -13,20 +13,20 @@ const floatingEl = document.querySelector("#tooltip") as HTMLElement;
 const arrowElement = document.querySelector("#arrow") as HTMLElement;
 
 autoUpdate(referenceEl, floatingEl, () => {
-  // auto
-  computePosition(referenceEl, floatingEl, {
-    middleware: [
-      autoPlacement((state) => ({
-        // padding: 5, // 0 by default
-        padding: state.rects.reference.width,
-        crossAxis: true,
-        alignment: "start", // top-start, right-start, bottom-start, left-start
-        // autoAlignment: false,
-      })),
-    ],
-  }).then(({ placement }) => {
-    console.log(placement); // 'top', 'bottom', 'left' or 'right'
-  });
+  // // auto
+  // computePosition(referenceEl, floatingEl, {
+  //   middleware: [
+  //     autoPlacement((state) => ({
+  //       // padding: 5, // 0 by default
+  //       padding: state.rects.reference.width,
+  //       crossAxis: true,
+  //       alignment: "start", // top-start, right-start, bottom-start, left-start
+  //       // autoAlignment: false,
+  //     })),
+  //   ],
+  // }).then(({ placement }) => {
+  //   console.log(placement); // 'top', 'bottom', 'left' or 'right'
+  // });
 
   // custom
   computePosition(referenceEl, floatingEl, {
