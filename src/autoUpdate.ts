@@ -5,6 +5,10 @@ import { getOverflowAncestors } from "./utils/getOverflowAncestors";
 import { floor, max, min } from "./utils/math";
 import { unwrapElement } from "./utils/unwrapElement";
 
+declare namespace NodeJS {
+  type Timeout = any;
+}
+
 export type AutoUpdateOptions = Partial<{
   /**
    * Whether to update the position when an overflow ancestor is scrolled.
